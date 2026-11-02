@@ -4,7 +4,7 @@ title: '#4471 · two causes, one ticket'
 owner: andreea21ungureanu
 status: living
 reviewed: 2026-11-02
-signature: andreea21ungureanu
+signature: "v1.eyJzdWIiOiIzNjQxIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTM2Mjc5MTYsImV4cCI6MTc5MzcxNDMxNn0.7hViyQDRYwvuKK0hkIocWdrEtyes3Hs3GwGQoog4zgY"
 ---
 
 <script>
@@ -12,7 +12,7 @@ signature: andreea21ungureanu
   import Callout from '#lib/kb/Callout.svelte';
   import RenderStamp from '#lib/kb/RenderStamp.svelte';
 
-  const signature = 'andreea21ungureanu';
+  const signature = 'v1.eyJzdWIiOiIzNjQxIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTM2Mjc5MTYsImV4cCI6MTc5MzcxNDMxNn0.7hViyQDRYwvuKK0hkIocWdrEtyes3Hs3GwGQoog4zgY';
 </script>
 
 The desk merged every date report into #4471 and marked it known: one parser bug, one fix queued. The export's own cause logic splits those reports. Intake tags are a guess from the browser. Cause follows the tenant (locale and booking form).

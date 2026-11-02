@@ -1,0 +1,39 @@
+---
+layout: runbook
+title: '#4471 · two causes, one ticket'
+owner: andreea21ungureanu
+status: living
+reviewed: 2026-11-02
+signature: andreea21ungureanu
+---
+
+<script>
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import Callout from '#lib/kb/Callout.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+
+  const signature = 'andreea21ungureanu';
+</script>
+
+The desk merged every date report into #4471 and marked it known: one parser bug, one fix queued. The export's own cause logic splits those reports. Intake tags are a guess from the browser. Cause follows the tenant (locale and booking form).
+
+<CauseTable ticket={4471} />
+
+<Callout kind="warn">
+#4471 owns the parser cause. The hint cause has no desk ticket of its own. Subject-line merge (decision 0001) put both in one pile.
+</Callout>
+
+## The two problems
+
+**parser.** The shared parser reads every date month first. Day-first tenants get a flipped month and day. This is the cause most of #4471 shares.
+
+**hint.** booking-v3 prints `MM/DD/YYYY` under the date field. People type month first, as the hint says. The form still reads the tenant's day-first order. That is not the parser.
+
+Five reports in the parser pile were read as a one-day move. They stay in the parser count because cause is by tenant. They are footnoted on the table, not a third cause.
+
+## Tickets filed
+
+- parser: [what-it-shows#1](https://github.com/andreea21ungureanu/what-it-shows/issues/1)
+- hint: [what-it-shows#2](https://github.com/andreea21ungureanu/what-it-shows/issues/2)
+
+<RenderStamp {signature} />

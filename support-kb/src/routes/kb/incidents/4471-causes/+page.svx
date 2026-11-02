@@ -36,4 +36,11 @@ Five reports in the parser pile were read as a one-day move. They stay in the pa
 - parser: [what-it-shows#1](https://github.com/andreea21ungureanu/what-it-shows/issues/1)
 - hint: [what-it-shows#2](https://github.com/andreea21ungureanu/what-it-shows/issues/2)
 
+## Desk follow-up
+
+#4471 closed 05 Oct.
+
+- parser: **fixed** (`fix(dates): parse dd/mm for eu locales`)
+- hint: **won't fix** (booking-v3 form retired)
+
 <RenderStamp {signature} />
